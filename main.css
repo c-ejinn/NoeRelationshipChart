@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Source+Serif+Pro:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Fullscreen Settings */
+body {
+    min-height: 98vh;
+    max-height: 98vh;
+    background-color: white;
+}
+
+.image-stack {
+    display: grid;
+    grid-template-columns: 100vh 100vh;
+    position: relative;
+    margin-left: 10rem;
+
+}
+
+.full-image {
+    min-height: 98vh;
+    max-height: 98vh;
+    position: relative;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+/* HOVER ME */
+
+.hoverMe {
+    font-family: "Lora", Garamond, serif;
+    font-size: 4.5rem;
+    display: inline-block;
+    max-height: fit-content;
+    position: absolute;
+    max-width: 25rem;
+    top: 3em;
+    left: 10.5em;
+    color: #af5c26;
+    /* edit */
+    opacity: 0;
+    transition: opacity 1000ms;
+}
+
+#kaomoji {
+    font-family: "Calibri", Helvetica, sans-serif;
+    font-size: 3rem !important;
+    transition: opacity 1000ms;
+}
+
+/* Relationship Line & Shadow settings */
+
+#Rua_shadow,
+#Manan_shadow,
+#Noe_shadow,
+#Clau_shadow,
+#Eilif_shadow,
+#Cr_shadow {
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+#Rua_lines,
+#Manan_lines,
+#Noe_lines,
+#Clau_lines,
+#Eilif_lines,
+#Cr_lines {
+    opacity: 0;
+    transition: opacity 600ms 200ms;
+}
+
+#Rua_svg,
+#Manan_svg,
+#Noe_svg,
+#Clau_svg,
+#Eilif_svg,
+#Cr_svg {
+    transition: fill-opacity 500ms;
+    pointer-events: all;
+    display: none;
+}
+
+
+
+#Manan_shadow,
+#Noe_shadow,
+#Clau_shadow,
+#Eilif_shadow,
+#Cr_shadow {
+    z-index: -5;
+}
+
+#Manan_lines,
+#Noe_lines,
+#Clau_lines,
+#Eilif_lines,
+#Cr_lines {
+    z-index: -1;
+}
+
+#Manan_png,
+#Noe_png,
+#Clau_png,
+#Eilif_png,
+#Cr_png {
+    transition: opacity 1000ms;
+    z-index: -2;
+    /* edit */
+    opacity: 0;
+}
+
+#Rua_png {
+    opacity: 0;
+}
+
+/* Description Text Settings */
+
+h1 {
+    font-family: "Lora", Garamond, serif;
+    font-size: 2.5vh;
+    font-weight: 400;
+}
+
+.desc {
+    opacity: 0;
+    display: inline-block;
+    font-family: "Lora", Garamond, serif;
+    font-size: 2.15vh;
+    /* color: #af5c26; */
+    line-height: 1.7rem;
+    position: absolute;
+    max-width: 30rem;
+    top: 3rem;
+    left: 54rem;
+    transition: opacity 500ms;
+    /* TODO */
+    /* color: #D3D3D3; */
+    color: white;
+}
+
+.newClazz {
+    color: #af5c26;
+}
+
+h1 span {
+    color: black
+}
+
+li {
+    list-style-type: none;
+    padding: 0.5rem;
+}
+
+/* Play buttion */
+.playButton {
+    max-width: fit-content;
+}
+
+#playButtonSvg {
+    position: absolute;
+    bottom: 2rem;
+    right: 3rem;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#pauseButtonSvg {
+    position: absolute;
+    bottom: 3rem;
+    right: 4rem;
+    opacity: 1;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#playButtonSvg,
+#pauseButtonSvg {
+    transition: fill 500ms;
+    transition: opacity 200ms;
+    pointer-events: all;
+}
+
+#playButtonSvg:hover {
+    fill: black;
+    pointer-events: all;
+}
+
+#pauseButtonSvg:hover {
+    fill: black;
+    pointer-events: all;
+}
+
+/* Main Page */
+.mainTitleClass {
+    font-family: "Lora", Garamond, serif;
+    font-size: 6vh;
+    opacity: 0.9;
+    color: #88522e;
+    /* color: #af5c26; */
+    line-height: 1.2em;
+    position: absolute;
+    top: 6em;
+    left: 18em;
+}
+
+.mainTitleClassNew {
+    color: #843c0c;
+}
+
+#mainTitle1,
+#mainTitle2 {
+    transition: opacity 1000ms;
+}
+
+#mainImg {
+    z-index: -5;
+    transition: opacity 1000ms;
+}
+
+button {
+    font-family: 'Schoolbell', cursive;
+    align-self: center;
+    background: transparent;
+    padding: 0.5rem 0.5rem;
+    /* margin: 0 0.8rem; */
+    transition: all .5s ease;
+    /* color: #41403E; */
+    color: #af5c26;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    outline: none;
+    box-shadow: 20px 38px 34px -26px hsla(0, 0%, 0%, .2);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    /* border: solid 2px #41403E; */
+    border: solid 2px #af5c26;
+    z-index: 5;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, .3);
+    transform: scale(1.1);
+}
+
+button:active {
+    color: #77360b;
+    border: solid 2px #77360b;
+    background-color: #e1c3b0;
+}
+
+.buttonPos {
+    position: absolute;
+    top: 19em;
+    left: 38em;
+}
